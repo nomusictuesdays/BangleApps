@@ -11,7 +11,7 @@ function getImg() {
 
 function draw() {
   var d = new Date();
-  var h = d.getHours() % 12 || 12, m = d.getMinutes(), yyyy = d.getFullYear(), mm = d.getMonth(), dd = d.getDate();
+  var h = d.getHours() % 12 || 12, m = d.getMinutes(), yyyy = d.getFullYear(), mm = 1+d.getMonth(), dd = d.getDate();
   var time = (""+h).substr(-2) + ":" + ("0"+m).substr(-2);
   g.reset();  // Reset the state of the graphics library
   g.clear();
@@ -35,9 +35,9 @@ function draw() {
   g.setFont("5x9Numeric7Seg",1);
   g.setFontAlign(1,1);
   g.setColor(0,0,1);
-  g.drawString(yyyy+" "+("0"+mm)+" "+dd, 100, 65, 0);
+  g.drawString(yyyy+" "+("0"+mm)+" "+("0"+dd), 100, 65, 0);
   g.setColor(0,0,0);
-  g.drawString(yyyy+" "+("0"+mm)+" "+dd, 99, 64, 0);
+  g.drawString(yyyy+" "+("0"+mm)+" "+("0"+dd), 99, 64, 0);
   //BATTERY
   g.setColor(0,0,1);
   g.drawString(E.getBattery(), 137, 53, 0);
@@ -52,34 +52,34 @@ function draw() {
   g.setFont("8x12");
   g.setColor(0,0,1);
   if (d.getDay()==0) {
-   g.drawString("SU", 137, 43, 0);
+   g.drawString("Su", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("SU", 136, 42, 0); 
+    g.drawString("Su", 136, 42, 0); 
   } else if (d.getDay()==1) {
-    g.drawString("MO", 137, 43, 0);
+    g.drawString("Mo", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("MO", 136, 42, 0);
+    g.drawString("Mo", 136, 42, 0);
   } else if (d.getDay()==2) {
-    g.drawString("TU", 137, 43, 0);
+    g.drawString("Tu", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("TU", 136, 42, 0);
+    g.drawString("Tu", 136, 42, 0);
   } else if (d.getDay()==3) {
-    g.drawString("WE", 137, 43, 0);
+    g.drawString("We", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("WE", 136, 42, 0);
+    g.drawString("We", 136, 42, 0);
   } else if (d.getDay()==4) {
     g.setFont("Dylex7x13");
-    g.drawString("TH", 137, 43, 0);
+    g.drawString("Th", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("TH", 136, 42, 0);
+    g.drawString("Th", 136, 42, 0);
   } else if (d.getDay()==5) {
-    g.drawString("FR", 137, 43, 0);
+    g.drawString("Fr", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("FR", 136, 42, 0);
+    g.drawString("Fr", 136, 42, 0);
   } else {
-    g.drawString("SA", 137, 43, 0);
+    g.drawString("Sa", 137, 43, 0);
     g.setColor(0,0,0);
-    g.drawString("SA", 136, 42, 0);
+    g.drawString("Sa", 136, 42, 0);
   }
   if(wizible==1){
      Bangle.drawWidgets();
