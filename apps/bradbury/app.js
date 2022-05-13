@@ -11,6 +11,7 @@ function getImg() {
 
 function draw() {
   var d = new Date();
+  require('locale').time(new Date());
   var h = d.getHours() % 12 || 12, m = d.getMinutes(), yyyy = d.getFullYear(), mm = 1+d.getMonth(), dd = d.getDate();
   var time = (""+h).substr(-2) + ":" + ("0"+m).substr(-2);
   g.reset();  // Reset the state of the graphics library
@@ -35,9 +36,9 @@ function draw() {
   g.setFont("5x9Numeric7Seg",1);
   g.setFontAlign(1,1);
   g.setColor(0,0,1);
-  g.drawString(yyyy+" "+("0"+mm)+" "+("0"+dd), 100, 65, 0);
+  g.drawString(d.toISOString().substr(0,4)+" "+d.toISOString().substr(5,2)+" "+d.toISOString().substr(8,2), 100, 65, 0);
   g.setColor(0,0,0);
-  g.drawString(yyyy+" "+("0"+mm)+" "+("0"+dd), 99, 64, 0);
+  g.drawString(d.toISOString().substr(0,4)+" "+d.toISOString().substr(5,2)+" "+d.toISOString().substr(8,2), 99, 64, 0);
   //BATTERY
   g.setColor(0,0,1);
   g.drawString(E.getBattery(), 137, 53, 0);
