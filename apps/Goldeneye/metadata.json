@@ -1,0 +1,18 @@
+{ "id": "goldeneye",
+ "name": "Goldeneye Watch",
+ "shortName":"Goldeneye",
+ "icon": "GoldeneyeIcon.png",
+ //"screenshots": [{"url":"screenshot.png"}],
+ "version":"0.021",
+ "description": "Early Test - 2022-09-16-741pm",
+ "type": "clock",
+ "supports":["BANGLEJS"],
+ "storage": [
+  {"name":"goldeneyejs1_night4.png","url":"goldeneyejs1_night4.png"},
+  {"name":"HourHandGlow.png","url":"HourHandGlow.png"},
+  {"name":"MinHandGlow.png","url":"MinHandGlow.png"},
+  {"name":"SecHandGlow.png","url":"SecHandGlow.png"},
+  {"name":"Goldeneye.app.js","url":"app.js"},
+  //{"name":"bradbury.img","url":"app-icon.js","evaluate":true}
+ ]
+}
