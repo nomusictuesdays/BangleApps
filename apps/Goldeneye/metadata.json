@@ -3,7 +3,7 @@
  "shortName":"Goldeneye",
  "icon": "GoldeneyeIcon.png",
  "version":"0.021",
- "description": "Early Test - 2022-09-16-839pm",
+ "description": "Early Test - 2022-09-16-848pm",
  "type": "clock",
  "supports":["BANGLEJS"],
  "storage": [
@@ -11,6 +11,6 @@
   {"name":"HourHandGlow.png","url":"HourHandGlow.png"},
   {"name":"MinHandGlow.png","url":"MinHandGlow.png"},
   {"name":"SecHandGlow.png","url":"SecHandGlow.png"},
-  {"name":"Goldeneye.app.js","url":"Goldeneye.app.js"},
+  {"name":"Goldeneye.app.js","url":"app.js"},
  ]
 }
